@@ -58,6 +58,29 @@ module.exports = {
                 }
             ],
           },
+          {
+            text: '关于java',
+            link: '/language/java/',
+          },
+          {
+            text: '关于php',
+            link: '/language/php/',
+          },
+        ],
+      },
+      {
+        text: '关于搜索引擎',
+        link: '/search/',
+        children: [
+          // SidebarItem
+          {
+            text: '基本原理',
+            link: '/search/principle.md',
+          },
+          {
+            text: '关于ES',
+            link: '/search/es/',
+          },
         ],
       },
     ],
