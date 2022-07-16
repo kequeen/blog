@@ -2,6 +2,15 @@ const { defaultTheme } = require('@vuepress/theme-default')
 module.exports = {
   port : 80,
   theme: defaultTheme({
+
+    navbar : [
+      {
+        text : '关于我',
+        link : '/nav/about_me.md'
+      },
+    ],
+
+
     // 你也可以直接将它设置为一个 URL
     repo: 'https://github.com/kequeen/blog',
     docsBranch: 'master',
