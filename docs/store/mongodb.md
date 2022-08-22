@@ -11,7 +11,7 @@
 5、索引的意义对于 mysql 与 mongodb 来说是一样的，虽然他们的底层实现不一样
 6、游标的概念
 
-mongodb中查询语言层面支持MR，这个还是挺离谱的
+mongodb中查询语言层面支持MR，这个还是挺离谱的，虽然TIDB中
 
 参考资料:
 1. <https://github.com/justinyhuang/the-little-mongodb-book-cn/blob/master/mongodb.md>

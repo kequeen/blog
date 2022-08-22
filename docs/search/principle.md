@@ -44,6 +44,7 @@
 1. <https://yuerblog.cc/2018/01/09/elasticsearch-custom/>
 2. [这就是搜索引擎](https://book.douban.com/subject/7006719/)
 3. <https://res1.zcmu.edu.cn/vpn/2/https/www.mamioo.com/seojishu/section-4>
+4. [自制搜索引擎](https://book.douban.com/subject/26681675/)
 
 
 
