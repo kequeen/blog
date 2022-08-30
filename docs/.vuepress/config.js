@@ -41,6 +41,11 @@ module.exports = {
         children: [
           // SidebarItem
           {
+            text: '数据结构',
+            link: '/algorithm/data_structure.md',
+            children: [],
+          },
+          {
             text: '关于排序',
             link: '/algorithm/sort.md',
             children: [],
@@ -89,6 +94,32 @@ module.exports = {
           {
             text: '关于ES',
             link: '/search/es/',
+          },
+        ],
+      },
+      {
+        text: '关于网络协议',
+        link: '/protocal/',
+        children: [
+          // SidebarItem
+          {
+            text: 'rpc',
+            link: '/protocal/rpc.md',
+          },
+          {
+            text: 'http',
+            link: '/protocal/http.md',
+          },
+        ],
+      },
+      {
+        text: '关于书',
+        link: '/book/',
+        children: [
+          // SidebarItem
+          {
+            text: '计算之魂',
+            link: '/book/the_essence_of_computing.md',
           },
         ],
       },
