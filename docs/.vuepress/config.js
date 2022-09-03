@@ -69,7 +69,11 @@ module.exports = {
                 {
                     text : '与其它语言的对比',
                     link : '/language/go/compare.md',
-                }
+                },
+                {
+                    text : '对golang的一些意见',
+                    link : '/language/go/complaint.md',
+                },
             ],
           },
           {
@@ -109,6 +113,21 @@ module.exports = {
           {
             text: 'http',
             link: '/protocal/http.md',
+          },
+        ],
+      },
+      {
+        text: '存储',
+        link: '/storage/',
+        children: [
+          // SidebarItem
+          {
+            text: 'mysql',
+            link: '/storage/mysql.md',
+          },
+          {
+            text: 'nosql',
+            link: '/storage/nosql.md',
           },
         ],
       },
