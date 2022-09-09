@@ -132,6 +132,16 @@ module.exports = {
         ],
       },
       {
+        text: '云原生',
+        link: '/cloud_native/',
+        children: [
+          {
+            text: 'k8s',
+            link: '/cloud_native/k8s.md',
+          },
+        ],
+      },
+      {
         text: '关于书',
         link: '/book/',
         children: [
