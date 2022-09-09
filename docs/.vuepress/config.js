@@ -74,6 +74,10 @@ module.exports = {
                     text : '对golang的一些意见',
                     link : '/language/go/complaint.md',
                 },
+                {
+                    text : '常见问题',
+                    link : '/language/go/interview.md',
+                },
             ],
           },
           {
