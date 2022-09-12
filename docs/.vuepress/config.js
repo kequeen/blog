@@ -133,6 +133,10 @@ module.exports = {
             text: 'nosql',
             link: '/storage/nosql.md',
           },
+          {
+            text: 'redis',
+            link: '/storage/redis.md',
+          },
         ],
       },
       {
