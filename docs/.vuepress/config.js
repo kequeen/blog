@@ -137,6 +137,10 @@ module.exports = {
             text: 'redis',
             link: '/storage/redis.md',
           },
+          {
+            text: 'mongodb',
+            link: '/storage/mongodb.md',
+          },
         ],
       },
       {
