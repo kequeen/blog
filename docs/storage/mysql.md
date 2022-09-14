@@ -6,17 +6,23 @@ mysql可以说是关系型数据库的典型了，大多数互联网公司以及
 
 ## 存储引擎
 类似于mysql常用的存储引擎主要有innodb和myisam，一般无特殊要求的情况下，都是使用innodb。
-其中最大的区别是
+innodb与myisam其中最大的区别就是对于事务的支持，以及对于行锁的支持
+
+### innodb
+如何实现事务
 
 ## 关于索引的选择
 
 
 ## 存储的数据结构
 关系型数据库一般是按行组织数据。
-例如mysql中的innoDB存储引擎采用B+树作为存储，pgsql中使用B树，
-B树与B+树之间的区别是，数据是否会存储在叶子节点
+例如mysql中的innoDB存储引擎采用B+树作为存储，pgsql中使用B树。  
+今天的各种存储引擎也有用[跳表](https://en.wikipedia.org/wiki/Skip_list)（以redis为例）和[LSM树](https://en.wikipedia.org/wiki/Log-structured_merge-tree)(以rocksdb为例)
 
-mysql的非
+B树与B+树之间的区别是，数据是否会存储在叶子节点
+相关的详细比较可以参考[这篇文章](https://segmentfault.com/a/1190000021488885)
+
+其实采用树这种数据结构的根本原因还是在于，磁盘的读取成本很高，而cpu计算很快
 
 
 ## 事务
@@ -28,6 +34,10 @@ ACID原则，原子性，一致性，隔离性，持久性
 ### 可重复读
 ### 可串行化
 
+
+## 关于mysql的高可用方案
+
+
 ## 参考文档
 1. <https://dev.mysql.com/doc/>
 2. <https://baike.baidu.com/item/%E5%AD%98%E5%82%A8%E5%BC%95%E6%93%8E/8969956>
@@ -35,3 +45,4 @@ ACID原则，原子性，一致性，隔离性，持久性
 4. <https://zh.m.wikipedia.org/zh-hans/%E4%BA%8B%E5%8B%99%E9%9A%94%E9%9B%A2>
 5. <https://draveness.me/whys-the-design-mysql-b-plus-tree/>
 6. <https://zh.m.wikipedia.org/zh-hans/B%2B%E6%A0%91>
+7. <https://redisbook.readthedocs.io/en/latest/internal-datastruct/skiplist.html>
