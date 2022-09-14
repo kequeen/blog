@@ -28,6 +28,11 @@ redis一致性hash一般是客户端方案，redis的hash槽是服务端方案
 2、高可用，数据不易丢失
 
 
+## 应用场景
+### 分布式锁
+具体可参考[这篇文档](http://www.redis.cn/topics/distlock.html)
+
+
 ## 文档
 1. <http://www.redis.cn/topics/sentinel.html>
 2. <http://www.redis.cn/topics/cluster-tutorial.html>
