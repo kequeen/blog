@@ -36,6 +36,9 @@ ACID原则，原子性，一致性，隔离性，持久性
 
 
 ## 关于mysql的高可用方案
+单机方案这里就不讨论了，可以直接关注横向扩展方案。目前官方是使用[Group Replication](https://dev.mysql.com/doc/refman/8.0/en/group-replication.html)的方案  
+节点新增或减少对数据的迁移，以及如何对事务的支持  
+Google的[spanner论文](https://dl.acm.org/doi/pdf/10.1145/2491245)其实是一个很好的解决方案
 
 
 ## 参考文档
@@ -46,3 +49,4 @@ ACID原则，原子性，一致性，隔离性，持久性
 5. <https://draveness.me/whys-the-design-mysql-b-plus-tree/>
 6. <https://zh.m.wikipedia.org/zh-hans/B%2B%E6%A0%91>
 7. <https://redisbook.readthedocs.io/en/latest/internal-datastruct/skiplist.html>
+8. <https://dev.mysql.com/doc/refman/8.0/en/group-replication.html>
