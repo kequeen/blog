@@ -51,3 +51,4 @@ POST /_sql?format=txt
 2. <https://github.com/elastic/elasticsearch>
 3. <https://www.elastic.co/guide/en/elasticsearch/reference/current/high-availability-cluster-small-clusters.html>
 4. <https://www.elastic.co/guide/en/elasticsearch/reference/current/size-your-shards.html>
+5. [一致性hash与hash槽的对比](https://www.jianshu.com/p/4163916a2a8a)
