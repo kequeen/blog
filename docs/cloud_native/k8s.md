@@ -34,10 +34,24 @@ pod的状态
 ## 工作负载资源
 ### DaemonSet
 [相关文档](https://kubernetes.io/zh-cn/docs/reference/kubernetes-api/workload-resources/daemon-set-v1/)
-其实就是守护进程的集合
+其实就是守护进程的集合  
+滚动更新是比较常见的更新策略,其实这种也是大型分布式系统的更新策略
+[更新策略](https://kubernetes.io/zh-cn/docs/tasks/manage-daemon/update-daemon-set/)
+
+## 调度、强占与驱逐
+<https://kubernetes.io/zh-cn/docs/concepts/scheduling-eviction/scheduler-perf-tuning/>
+要调度的时候，其实就是先筛选出满足条件的节点，然后按照规则去打分
+如果要提升调度性能的话，可以在找到足够数量的满足条件就停止
 
 
+## CronJob
+[参考文档](https://kubernetes.io/zh-cn/docs/concepts/workloads/controllers/cron-jobs/)
+其实就是在单机上本来就有定时任务，然后迁移到了分布式系统上，其实最大的问题就是如何避免重复调度，以及监控和收集运行状态
 
+## 疑问
+1、k8s如何实现多机房不同配置的分发，这个是在哪一步去做的
+我突然在想一个问题，其实跨机房的话，是不是每个机房都应该有一个k8s来进行调度
+看了一下网上的方案，大部分来说应该都是每个机房一个k8s集群，跨机房调度其实需要考虑的东西就更多了
 
 ## 参考文档
 1. <https://kubernetes.io/zh-cn/docs/tutorials/kubernetes-basics/>
