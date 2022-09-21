@@ -48,6 +48,9 @@ pod的状态
 [参考文档](https://kubernetes.io/zh-cn/docs/concepts/workloads/controllers/cron-jobs/)
 其实就是在单机上本来就有定时任务，然后迁移到了分布式系统上，其实最大的问题就是如何避免重复调度，以及监控和收集运行状态
 
+## 容器运行时
+[相关文档](https://kubernetes.io/zh-cn/docs/concepts/architecture/cri/)，需要容器去实现这些[定义](https://github.com/kubernetes/cri-api/blob/c75ef5b/pkg/apis/runtime/v1/api.proto),我理解就是容器与docker脱钩，不再被强行绑定在一起
+
 ## 疑问
 1、k8s如何实现多机房不同配置的分发，这个是在哪一步去做的
 我突然在想一个问题，其实跨机房的话，是不是每个机房都应该有一个k8s来进行调度
