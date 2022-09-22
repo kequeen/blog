@@ -30,10 +30,22 @@ int search(Object element)
 golang中也类似，不过其本身是用container中list的数据结构来实现的
 
 
+## 树
+一般我们常见的是二叉树或者N叉树。像基础的搜索二叉树，其实是缺乏实际的落地场景的，因为树高难以控制，所以一般工程上使用的是[红黑树](https://zh.wikipedia.org/wiki/%E7%BA%A2%E9%BB%91%E6%A0%91),是一种特殊的平衡二叉树，可以在数据增长的情况下，让二叉树保持高度上的平衡。一般用户类似于hashmap或者关联数组中，发生hash冲突之后，如果冲突的key比较少，一般是8，则用链表表示，多于这个数，则一般会转换成红黑树    
+而N叉树的一个应用就是B树和B+树，这种一般用于数据库存储上。  
+[Trie树](https://zh.m.wikipedia.org/zh-hans/Trie)，一般搜索的场景会使用比较多，主要优势在于做前缀匹配效率确实高
+
+## 图
+表示的方式有邻接链表和邻接矩阵两种，类似于我们日常生活中的场景，从A->B的最短路径，就可以将地图抽象成图，各个点的距离抽象成图的边，就可以将生活中的类似问题抽象成图的问题，然后就可以按照关于图的各种理论来进行计算
+
+
+
 ## Map
 基本上所有的语言都认为这是一个必需的数据结构，php中的关联数组，java中的hashmap，golang中的map。
 
 
 ## 参考文档
 1. <https://book.douban.com/subject/19952400/>
+2. <https://zh.wikipedia.org/zh-sg/%E4%BA%8C%E5%8F%89%E6%A0%91>
+3. <https://zh.m.wikipedia.org/zh-hans/%E5%9B%BE_(%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84)>
 

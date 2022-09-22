@@ -53,7 +53,13 @@ module.exports = {
           {
             text: 'leetcode',
             link: '/algorithm/leetcode/',
-            children: [],
+            children: [
+              {
+                text: '动态规划',
+                link: '/algorithm/leetcode/dp.md',
+                children: [],
+              },
+            ],
           },
         ],
       },
