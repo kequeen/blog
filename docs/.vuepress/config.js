@@ -1,8 +1,15 @@
 const { defaultTheme } = require('@vuepress/theme-default')
 module.exports = {
+  plugins: [
+    [
+      '@vuepress/google-analytics',
+      {
+        'ga': 'G-WRXCG8WJ9G' // UA-00000000-0
+      }
+    ]
+  ],
   port : 80,
   theme: defaultTheme({
-
     navbar : [
       {
         text : '关于我',
