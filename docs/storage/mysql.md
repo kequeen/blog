@@ -6,7 +6,7 @@ mysql可以说是关系型数据库的典型了，大多数互联网公司以及
 
 ## 存储引擎
 类似于mysql常用的存储引擎主要有innodb和myisam，一般无特殊要求的情况下，都是使用innodb。
-innodb与myisam其中最大的区别就是对于事务的支持，以及对于行锁的支持
+innodb与myisam其中最大的区别就是对于事务的支持，以及对于行锁的支持，而这个支持
 
 ### innodb
 如何实现事务
@@ -36,9 +36,13 @@ ACID原则，原子性，一致性，隔离性，持久性
 
 
 ## 关于mysql的高可用方案
-单机方案这里就不讨论了，可以直接关注横向扩展方案。目前官方是使用[Group Replication](https://dev.mysql.com/doc/refman/8.0/en/group-replication.html)的方案  
+具体可参考[这篇文章](https://zhuanlan.zhihu.com/p/25960208)，其实核心还是那几种方案，主从，双主，多副本
+
+## mysql的横向扩展
+可以直接关注横向扩展方案。目前官方是使用[Group Replication](https://dev.mysql.com/doc/refman/8.0/en/group-replication.html)的方案  
 节点新增或减少对数据的迁移，以及如何对事务的支持  
 Google的[spanner论文](https://dl.acm.org/doi/pdf/10.1145/2491245)其实是一个很好的解决方案
+看下 TIDB 中是如何对分布式事务进行支持的，可看[这篇文档](https://docs.pingcap.com/zh/tidb/stable/optimistic-transaction])
 
 
 ## 参考文档
