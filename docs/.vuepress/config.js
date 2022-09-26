@@ -175,6 +175,10 @@ module.exports = {
             text: '计算之魂',
             link: '/book/the_essence_of_computing.md',
           },
+          {
+            text: 'ddia',
+            link: '/book/ddia.md',
+          },
         ],
       },
     ],
