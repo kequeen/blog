@@ -52,9 +52,12 @@ pod的状态
 [相关文档](https://kubernetes.io/zh-cn/docs/concepts/architecture/cri/)，需要容器去实现这些[定义](https://github.com/kubernetes/cri-api/blob/c75ef5b/pkg/apis/runtime/v1/api.proto),我理解就是容器与docker脱钩，不再被强行绑定在一起
 
 ## 疑问
-1、k8s如何实现多机房不同配置的分发，这个是在哪一步去做的
+1. k8s如何实现多机房不同配置的分发，这个是在哪一步去做的
 我突然在想一个问题，其实跨机房的话，是不是每个机房都应该有一个k8s来进行调度
 看了一下网上的方案，大部分来说应该都是每个机房一个k8s集群，跨机房调度其实需要考虑的东西就更多了
+
+2. 有状态服务与无状态服务
+以前一直没有太明白这个概念，其实用最简单的概念阐述，就是有状态服务每次请求，其实只能由特定的机器或者容器来处理【其实类似于 mysql 或者 redis 这种存储】，无状态服务就是每次请求到所有机器上都OK
 
 ## 参考文档
 1. <https://kubernetes.io/zh-cn/docs/tutorials/kubernetes-basics/>
