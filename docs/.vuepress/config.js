@@ -66,6 +66,11 @@ module.exports = {
                 link: '/algorithm/leetcode/dp.md',
                 children: [],
               },
+              {
+                text: '链表',
+                link: '/algorithm/leetcode/linked_list.md',
+                children: [],
+              },
             ],
           },
         ],
