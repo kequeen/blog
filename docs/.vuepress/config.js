@@ -71,6 +71,11 @@ module.exports = {
                 link: '/algorithm/leetcode/linked_list.md',
                 children: [],
               },
+              {
+                text: '树',
+                link: '/algorithm/leetcode/tree.md',
+                children: [],
+              },
             ],
           },
         ],
