@@ -133,6 +133,9 @@ func dfs(A *TreeNode, B *TreeNode) bool {
 ### N叉树
 一般B树和B+树会作为其考察的一个重点，但一般也只是询问原理，以及为何需要使用
 
+## 一些思考
+1. 什么时候是比较值，什么时候是两个指针地址直接比较
+
 
 ## 参考链接
 1. <https://zh.wikipedia.org/wiki/AVL%E6%A0%91>

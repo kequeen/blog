@@ -5,11 +5,13 @@
 其实最容易搞混的就是递归与动态规划的必然联系，应该是说动态规划其实是将大问题拆解为小问题，而需要优化的话，一般就是存储已经求解的子问题的答案，减少重复计算。一般其实采用自底向上计算
 
 ## 0-1背包问题
+看到这个[滚动数组](https://www.cnblogs.com/RioTian/p/12397821.html)的优化，还是很有意思的，最新的状态只依赖于有限的几个状态，确实没必要去保存所有的状态。其实按照《计算之魂》这本书中的观点里面提到的也一样，去掉无用的计算。
 
 ## 完全背包问题
+
 
 ## 参考文档：
 1. <https://zhuanlan.zhihu.com/p/93857890>
 2. <https://zh.m.wikipedia.org/zh/%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98>
 3. <https://www.geeksforgeeks.org/solve-dynamic-programming-problem/?ref=lbp>
-4. <https://zh.m.wikipedia.org/zh/%E5%88%86%E6%B2%BB%E6%B3%95>
+4. <https://zh.m.wikipedia.org/zh/%E5%88%86%E6%B2%BB%E6%B3%95> 
