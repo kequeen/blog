@@ -63,3 +63,6 @@
 网上的示例使用场景是用于类似于ORM框架这种，将对象本身转化成sql
 我发现golang中的json
 
+5. 关于字符串的遍历
+相关链接，<https://berryjam.github.io/2018/03/%E4%BB%8Egolang%E5%AD%97%E7%AC%A6%E4%B8%B2string%E9%81%8D%E5%8E%86%E8%AF%B4%E8%B5%B7/>，自己之前也一直模糊的点在于如何遍历字符串，这个文章里面就说得比较清楚，range是用字符遍历，s[i]这种方式是用字节去遍历，就是所谓的rune类型，也是int32的别名
+
