@@ -90,17 +90,14 @@ module.exports = {
             link: '/language/go/',
             children: [
                 {
-                    text : '与其它语言的对比',
-                    link : '/language/go/compare.md',
+                    text : '常见问题',
+                    link : '/language/go/interview.md',
                 },
                 {
                     text : '对golang的一些意见',
                     link : '/language/go/complaint.md',
                 },
-                {
-                    text : '常见问题',
-                    link : '/language/go/interview.md',
-                },
+
             ],
           },
           {
