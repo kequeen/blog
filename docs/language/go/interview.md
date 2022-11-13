@@ -7,6 +7,32 @@
 
 其实又会延伸另外一个问题，多线程场景下，单个线程的崩溃是否可能引起其它线程的崩溃？
 
+## 关于golang中的逃逸分析
+[逃逸分析](https://en.wikipedia.org/wiki/Escape_analysis),其实就是确认在哪里可以访问到指针，核心目的是将内存分配到堆上或者分配到栈上。
+逃逸分析的基本原则
+>如果函数外部没有引用，则优先放到栈中；
+>如果函数外部存在引用，则必定放到堆中；
+也会有一些异常情况：
+1. interface{} 动态类型逃逸
+2. 栈空间大小不足
+
+更多细节可以参考着两篇文章：
+1. [Go逃逸分析](https://geektutu.com/post/hpg-escape-analysis.html)
+2. [逃逸分析是怎么进行的](https://golang.design/go-questions/compile/escape/)
+
+## slice和map的底层原理
+可参考[这篇文档](https://golang.design/go-questions/slice/vs-array/)
+核心是理解其底层结构
+``` go
+type slice struct {
+	array unsafe.Pointer // 元素指针
+	len   int // 长度 
+	cap   int // 容量
+}
+```
+
+## 如何优雅退出协程
+
 ## Golang中切片的扩展规则
 其实可以理解为切片如何做自动扩容
 可以参考[这篇文章](https://draveness.me/golang/docs/part2-foundation/ch03-datastructure/golang-array-and-slice/),以及golang中的源码
