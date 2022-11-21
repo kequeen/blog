@@ -81,6 +81,11 @@ module.exports = {
                 link: '/algorithm/leetcode/matrix.md',
                 children: [],
               },
+              {
+                text: '回溯法',
+                link: '/algorithm/leetcode/backtrace.md',
+                children: [],
+              },
             ],
           },
         ],
