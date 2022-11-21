@@ -184,6 +184,16 @@ module.exports = {
         ],
       },
       {
+        text: '系统设计',
+        link: '/system_design/',
+        children: [
+          {
+            text: '消息队列',
+            link: '/system_design/mq.md',
+          },
+        ],
+      },
+      {
         text: '关于书',
         link: '/book/',
         children: [
