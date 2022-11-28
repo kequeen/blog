@@ -51,6 +51,10 @@ pod的状态
 ## 容器运行时
 [相关文档](https://kubernetes.io/zh-cn/docs/concepts/architecture/cri/)，需要容器去实现这些[定义](https://github.com/kubernetes/cri-api/blob/c75ef5b/pkg/apis/runtime/v1/api.proto),我理解就是容器与docker脱钩，不再被强行绑定在一起
 
+
+## sidecar
+可以参考[文档](https://jimmysong.io/kubernetes-handbook/usecases/sidecar-pattern.html)
+
 ## 疑问
 1. k8s如何实现多机房不同配置的分发，这个是在哪一步去做的
 我突然在想一个问题，其实跨机房的话，是不是每个机房都应该有一个k8s来进行调度
