@@ -35,6 +35,7 @@ redis一致性hash一般是客户端方案，redis的hash槽是服务端方案�
 一个redis集群包含16384个hash slot（因为是2^14），为什么是16384个， 可见[作者的回答](https://github.com/redis/redis/issues/2576)
 
 服务端各个节点之间，通过gossip协议，通知对方自己存储了哪些槽的信息。然后下线的信息，也是通过gossip协议去传播。
+哨兵集群和redis实例通信时，会采用这个Pub/Sub,一般采用redis做消息队列的场景并不多。
 
 服务端的过程：
 1. 初始化，确认每个节点的槽
