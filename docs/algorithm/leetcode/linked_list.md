@@ -209,6 +209,42 @@ func oddEvenList(head *ListNode) *ListNode {
 }
 ```
 
+### 删除链表中的节点
+这个题目有两种形式的变种
+1. 给定删除的节点,[题目链接](https://leetcode.cn/leetbook/read/top-interview-questions/xadve1/)
+``` go
+func deleteNode(node *ListNode) {
+	if node.Next == nil {
+		node = nil
+	}
+	node.Val = node.Next.Val
+	node.Next = node.Next.Next
+}
+```
+
+2. 给定头结点，以及要删除的节点的值。这个就需要用到双指针去进行处理
+[题目链接](https://leetcode.cn/problems/shan-chu-lian-biao-de-jie-dian-lcof/)
+``` go
+func deleteNode(head *ListNode, val int) *ListNode {
+	if head.Val == val {
+		return head.Next
+	}
+	prev := head
+	cur := head.Next
+	for cur != nil && cur.Val != val {
+		prev = cur
+		cur = cur.Next
+	}
+	//就算是最后一位也不例外
+	if cur != nil {
+		prev.Next = cur.Next
+	}
+	return head
+}
+
+```
+
+
 ## 总结
 其实关于链表的题目，都可以多往双指针方面去思考，很多难题说不定就迎刃而解了。
 
