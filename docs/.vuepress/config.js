@@ -194,6 +194,16 @@ module.exports = {
         ],
       },
       {
+        text: '关于前端',
+        link: '/front_end/',
+        children: [
+          {
+            text: 'react',
+            link: '/front_end/react.md',
+          },
+        ],
+      },
+      {
         text: '关于书',
         link: '/book/',
         children: [
