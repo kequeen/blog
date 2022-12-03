@@ -244,6 +244,25 @@ func deleteNode(head *ListNode, val int) *ListNode {
 
 ```
 
+还有一种比较妙的解法,增加了一个头结点，然后就把所有的问题都归一化了
+``` go
+func deleteNode(head *ListNode, val int) *ListNode {
+	newHead := &ListNode{
+		Val:  0,
+		Next: head,
+	}
+	for p := newHead; p.Next != nil; p = p.Next {
+		if p.Next.Val == val {
+			//删除节点
+			p.Next = p.Next.Next
+			break
+		}
+	}
+	return newHead.Next
+}
+
+```
+
 
 ## 总结
 其实关于链表的题目，都可以多往双指针方面去思考，很多难题说不定就迎刃而解了。
