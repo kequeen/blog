@@ -86,6 +86,11 @@ module.exports = {
                 link: '/algorithm/leetcode/backtrace.md',
                 children: [],
               },
+              {
+                text: '图论',
+                link: '/algorithm/leetcode/graph.md',
+                children: [],
+              },
             ],
           },
         ],
