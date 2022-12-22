@@ -91,6 +91,11 @@ module.exports = {
                 link: '/algorithm/leetcode/graph.md',
                 children: [],
               },
+              {
+                text: '贪心',
+                link: '/algorithm/leetcode/greedy.md',
+                children: [],
+              },
             ],
           },
         ],
