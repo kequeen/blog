@@ -214,6 +214,16 @@ module.exports = {
         ],
       },
       {
+        text: '关于其它',
+        link: '/other/',
+        children: [
+          {
+            text: '区块链',
+            link: '/other/block_train/',
+          },
+        ],
+      },
+      {
         text: '关于书',
         link: '/book/',
         children: [
