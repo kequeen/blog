@@ -96,6 +96,11 @@ module.exports = {
                 link: '/algorithm/leetcode/greedy.md',
                 children: [],
               },
+              {
+                text: 'lru',
+                link: '/algorithm/leetcode/lru.md',
+                children: [],
+              },
             ],
           },
         ],
@@ -112,6 +117,14 @@ module.exports = {
                 {
                     text : '常见问题',
                     link : '/language/go/interview.md',
+                },
+                {
+                    text : '并发',
+                    link : '/language/go/concurrency.md',
+                },
+                {
+                    text : '调度器',
+                    link : '/language/go/scheduler.md',
                 },
                 {
                     text : '对golang的一些意见',

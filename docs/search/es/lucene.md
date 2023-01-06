@@ -13,6 +13,9 @@ Term dictionary在磁盘中是以分block保存的，一个block内部利用公�
 
 关于skip list的使用，可以参考[这个文档](https://juejin.cn/post/7001130816029884429)，其实是因为要分块压缩，可以更快定位到自己的位置
 
+之前一直没有太关注压缩算法，但对于搜索引擎而言，压缩算法其实是很重要的事情
+
+
 ## 参考文档
 1. <https://zh.wikipedia.org/wiki/Lucene>
 2. <https://www.shenyanchao.cn/blog/2018/12/04/lucene-fst/>
