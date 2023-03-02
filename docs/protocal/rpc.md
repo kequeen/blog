@@ -1,6 +1,8 @@
 # rpc
 其实是主要想聊下关于rpc(Remote Procedure Call)的问题，其实广义来说，http 协议也是一种 rpc，但其效率较低，因为数据传输格式比较浪费存储空间
 java中本身自带 rpc 的解决方案，然而因为java 对象的序列化，其它语言不可读
+【在仔细阅读完brpc的文档之后，希望自己能够再来做一个比较合适的补充】
+
 
 ## grpc与brpc的异同
 1、 grpc采用 http2，而brpc 支持http中的ProgressiveReader, h2的streams, streaming rpc, 和专门的流式协议RTMP
