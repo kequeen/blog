@@ -101,6 +101,11 @@ module.exports = {
                 link: '/algorithm/leetcode/lru.md',
                 children: [],
               },
+              {
+                text: '滑动窗口',
+                link: '/algorithm/leetcode/sliding_window.md',
+                children: [],
+              },
             ],
           },
         ],
