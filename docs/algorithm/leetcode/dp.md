@@ -1,8 +1,11 @@
 # 关于动态规划
-动态规划相关的算法，其实是这些年面试最常见的高频题目了，其实也是相当考验个人能力  
+动态规划相关的算法，其实是这些年面试最常见的高频题目了。对个人能力的考察点我理解主要在于抽象能力，我们如何从复杂的运算中，抽象出问题的本质。   
 有时候会很喜欢dp的思想，构建状态转移方程，就能够通过自顶向下地计算获取结果  
-最核心的就是如何构造出动态规划方程  
-其实最容易搞混的就是递归与动态规划的必然联系，应该是说动态规划其实是将大问题拆解为小问题，而需要优化的话，一般就是存储已经求解的子问题的答案，减少重复计算。一般其实采用自底向上计算
+最核心的就是如何构造出动态规划方程    
+其实最容易搞混的就是递归与动态规划的必然联系，应该是说动态规划其实是将大问题拆解为小问题，
+
+## 注意点
+1. 一般直接使用状态转移方程，就是使用递归的方式，而单纯使用递归的话，就会有重复计算，容易导致超时。而需要优化的话，一般就是存储已经求解的子问题的答案，减少重复计算。一般其实采用自底向上计算
 
 ## 背包问题
 
@@ -26,7 +29,7 @@ func climbStairs(n int) int {
 	return climbStairs(n-1) + climbStairs(n-2)
 }
 ```
-做一些优化，存储历史状态，减少重复计算
+这种方式目前会计算超时，所以需要做一些优化，存储历史状态，减少重复计算，其实就是以空间换时间，这也是算法中很常见的优化方式
 ``` go
 //不重复计算，以空间换时间
 func climbStairsV2(n int) int {
@@ -61,6 +64,57 @@ func climbStairs(n int) int {
 	}
 	return ans
 }
+```
+
+### 杨辉三角
+[杨辉三角题目描述](https://leetcode.cn/problems/pascals-triangle/description/)
+``` go
+func generate(numRows int) [][]int {
+	ans := make([][]int, numRows)
+	for i, _ := range ans {
+		ans[i] = make([]int, i+1)
+		ans[i][0] = 1
+		ans[i][i] = 1
+		for j := 1; j < i; j++ {
+			ans[i][j] = ans[i-1][j-1] + ans[i-1][j]
+		}
+	}
+	return ans
+}
+
+```
+
+### 最长公共子序列
+[最长公共子序列题目](https://leetcode.cn/problems/longest-common-subsequence/submissions/)
+``` go
+func max(a, b int) int {
+	if a > b {
+		return a
+	}
+	return b
+}
+
+// 上面自己的写法建模有些复杂了，其实可以简化一下，因为dp[i][j]只和dp[i-1][j], dp[i][j-1]
+// 为什么不需要比较dp[i-1][j-1]，因为dp[i-1][j] 和 dp[i][j-1]都和这个有关
+func longestCommonSubsequenceV2(text1 string, text2 string) int {
+	len1 := len(text1)
+	len2 := len(text2)
+	dp := make([][]int, len1+1)
+	for i := 0; i < len1+1; i++ {
+		dp[i] = make([]int, len2+1)
+	}
+	for i, c1 := range text1 {
+		for j, c2 := range text2 {
+			if c1 == c2 {
+				dp[i+1][j+1] = dp[i][j] + 1
+			} else {
+				dp[i+1][j+1] = max(dp[i][j+1], dp[i+1][j])
+			}
+		}
+	}
+	return dp[len1][len2]
+}
+
 ```
 
 ### 爬楼梯变种
