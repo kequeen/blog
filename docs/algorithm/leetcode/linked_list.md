@@ -6,20 +6,16 @@
 关于链表反转，其实就是增加一个临时节点存储存储下当前节点的信息。
 ``` go
 func reverseList(head *ListNode) *ListNode {
-
-	if head == nil || head.Next == nil {
-		return head
-	}
-	var temp *ListNode
-	var pre *ListNode
-	pre = nil
-	for head != nil {
-		temp = head.Next
-		head.Next = pre
-		pre = head
-		head = temp
-	}
-	return pre
+    //最最经典的反转链表
+    var prev *ListNode
+    cur := head
+    for cur != nil {
+        temp := cur.Next
+        cur.Next = prev
+        prev = cur
+        cur = temp
+    } 
+    return prev
 }
 ```
 
