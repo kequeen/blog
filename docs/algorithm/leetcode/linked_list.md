@@ -56,7 +56,7 @@ type ListNode struct {
 
 //https://leetcode.cn/leetbook/read/top-interview-questions/xa262d/
 //链表排序
-
+// 用快慢指针寻找中间节点，然后再去merge两个链表的数据
 func sortList(head *ListNode) *ListNode {
 	//最合适的方式是使用归并排序,其实这道题目还是考察挺全面的，考察了如何找到链表的中间节点，以归并排序
 	return sort(head, nil)

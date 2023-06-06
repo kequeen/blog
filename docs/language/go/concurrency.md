@@ -10,6 +10,7 @@ goroutine和channel是golang并发的基石，也是golang目前与其他语言�
 channel本身使用上也比较复杂，其实可以理解为语言层面的消息队列，会关注几个问题：
 ### 发送消息到一个不带缓冲区的channel会怎么样
 
+
 ### 如何优雅关闭channel
 因为比较难以检测channel中的数据是否都已经消费完，这其实会是一个问题
 

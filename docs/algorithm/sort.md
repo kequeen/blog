@@ -88,6 +88,34 @@ top K问题的常见解法
 
 ## 快速排序
 有时候真的很想感慨，想出快排的人真是个天才。快排也是目前工业界一般情况下选择的算法。毕竟其平均复杂度O(nlogn)
+实现方法1，比较容易理解的，但是需要不停创建新的数组
+``` go
+func quickSort(arr []int) []int{
+	if len(arr) <= 1 {
+		return
+	}
+	var left []int
+	var right []int
+	temp = arr[0]
+	for i := 1; i < len(arr); i++ {
+		if temp > arr[i] {
+			left = append(left, arr[i])
+		}else {
+			right = append(right,arr[i])
+		}
+	}
+	//分别对左右再进行排序
+	left = quickSort(left)
+	right = quickSort(right)
+	return append(append(left, temp), right...)
+}
+
+```
+实现方法2，原地排序，就是找到一个中间数，然后递归
+``` go
+
+
+```
 
 ## 归并排序
 如果只是2个数组的归并排序
