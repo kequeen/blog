@@ -113,8 +113,32 @@ func quickSort(arr []int) []int{
 ```
 实现方法2，原地排序，就是找到一个中间数，然后递归
 ``` go
+func quickSort(arr []int, low, high int) {
+	if low < high {
+		//寻找切割的下标
+		pivotIndex := partition(arr, low, high)
+		//对左右再分别排序
+		quickSort(arr, low, pivotIndex-1)
+		quickSort(arr, pivotIndex+1, high)
+	}
 
+}
 
+// 分区函数
+func partition(arr []int, low int, high int) int {
+	//取一个数作为基准
+	privot := arr[high]
+	i := low - 1
+	for j := low; j < high; j++ {
+		if arr[j] < privot {
+			i++
+			arr[i], arr[j] = arr[j], arr[i]
+		}
+	}
+	//交换下位置
+	arr[high], arr[i+1] = arr[i+1], arr[high]
+	return i + 1
+}
 ```
 
 ## 归并排序
