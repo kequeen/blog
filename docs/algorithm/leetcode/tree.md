@@ -153,6 +153,28 @@ func buildTree(preorder []int, inorder []int) *TreeNode {
 }
 ```
 
+### 将有序数组转换为二叉搜索树
+这道题有点二分查找和快速排序的递归写法那般
+``` go
+// https://leetcode.cn/problems/convert-sorted-array-to-binary-search-tree/description/?envType=study-plan-v2&envId=top-100-liked
+// 将有序数组转换为二叉搜索树
+func sortedArrayToBST(nums []int) *TreeNode {
+	return helper(nums, 0, len(nums)-1)
+
+}
+
+func helper(nums []int, left int, right int) *TreeNode {
+	if left > right {
+		return nil
+	}
+	mid := (right + left) / 2
+	root := &TreeNode{Val: nums[mid]}
+	root.Left = helper(nums, left, mid-1)
+	root.Right = helper(nums, mid+1, right)
+	return root
+}
+```
+
 ## 变种
 ### 红黑树
 红黑树作为有名的变种之一，一般很少考察，因为确实比较复杂，也很少有人能够在短时间内写出bug free的红黑树
@@ -162,6 +184,7 @@ func buildTree(preorder []int, inorder []int) *TreeNode {
 
 ## 一些思考
 1. 什么时候是比较值，什么时候是两个指针地址直接比较
+之前直接比较两个地址的那次是在是有点太傻了
 
 
 ## 参考链接
