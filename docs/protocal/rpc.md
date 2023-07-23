@@ -3,6 +3,12 @@
 java中本身自带 rpc 的解决方案，然而因为java 对象的序列化，其它语言不可读
 【在仔细阅读完brpc的文档之后，希望自己能够再来做一个比较合适的补充】
 
+在读了《凤凰架构》一书之后，对RPC又有了一些自己的感悟。
+RPC要解决的三个问题：
+1）如何表示数据
+2）如何传递数据
+3）如何确定方法
+
 
 ## grpc与brpc的异同
 1、 grpc采用 http2，而brpc 支持http中的ProgressiveReader, h2的streams, streaming rpc, 和专门的流式协议RTMP
