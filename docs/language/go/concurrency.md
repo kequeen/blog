@@ -12,10 +12,27 @@ channel本身使用上也比较复杂，其实可以理解为语言层面的消�
 
 
 ### 如何优雅关闭channel
-因为比较难以检测channel中的数据是否都已经消费完，这其实会是一个问题
+因为比较难以检测channel中的数据是否都已经消费完，这其实会是一个问题.并且像一个已经被close的channel发送消息的话，会导致panic
+一般来说是由发送方去关闭channel
+主要分为三种情况
+1. M个接收者，1个发送者
+这种情况下发送者直接关闭就可以
+2. 1个接收者，M个发送者
+这种情况下可以由接收者通过关闭一个信号通道，去通知发送者停止发送数据
+3. M个接收者，N个发送者
+这种情况需要一个主持人
+```go
+    // 主持人
+    go func() {
+        stoppedBy = <-toStop
+        close(stopCh)
+    }()
+```
+满足条件由接受者或者发送者去调用主持人进行更新
 
 ### 问题分析
 具体可参考[链接](https://keepmoving.ren/golang/waitgroup/)
 
 ## 参考链接
 1. <https://github.com/panjf2000/ants/blob/master/README_ZH.md>
+2. <https://learnku.com/go/t/23459/how-to-close-the-channel-gracefully>
