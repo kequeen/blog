@@ -27,7 +27,7 @@ redis其实也是一种存储，虽然大家很多时候认为其是缓存，但
 7. 当所有从服务器都已经开始复制新的主服务器时，领导的哨兵终止此次故障迁移操作
 
 ## 关于redis的扩容
-单机的物理容量有限，无论你硬盘和内存再怎么扩，单个物理机也还是有上限的，并且纵向扩容的成本一般较高，并且也会有单机宕机的风险。所以我们所说的罗荣，一般都是指横向扩容。
+单机的物理容量有限，无论你硬盘和内存再怎么扩，单个物理机也还是有上限的，并且纵向扩容的成本一般较高，并且也会有单机宕机的风险。所以我们所说的扩容，一般都是指横向扩容。
 
 ### 集群方案
 没有采用一致性hash的方案，这是比较让我觉得意外的。
@@ -54,6 +54,24 @@ redis一致性hash一般是客户端方案，redis的hash槽是服务端方案�
 
 ## redis的分布式一致性
 1. 可参考[这篇文档](https://learn.lianglianglee.com/%E4%B8%93%E6%A0%8F/%E5%88%86%E5%B8%83%E5%BC%8F%E4%B8%AD%E9%97%B4%E4%BB%B6%E5%AE%9E%E8%B7%B5%E4%B9%8B%E8%B7%AF%EF%BC%88%E5%AE%8C%EF%BC%89/04%20%E5%88%86%E5%B8%83%E5%BC%8F%E4%B8%80%E8%87%B4%E6%80%A7%E5%8D%8F%E8%AE%AE%20Gossip%20%E5%92%8C%20Redis%20%E9%9B%86%E7%BE%A4%E5%8E%9F%E7%90%86%E8%A7%A3%E6%9E%90.md)
+
+
+## redis的数据结构
+传统意义上认为redis有五种数据结构，string、list、hash、set、zset，但实际上，按照其[官方文档]<https://redis.io/docs/data-types/>的表述，其应该有10种数据结构
+### string
+### list
+### hash
+### set
+### zset
+### json
+### streams
+[参考链接](https://redis.io/docs/data-types/streams/)
+### Geospatial
+主要是用于地理定位的
+[参考链接](https://redis.io/docs/data-types/geospatial/)
+### bitmaps
+
+
 
 ## 应用场景
 ### 分布式锁

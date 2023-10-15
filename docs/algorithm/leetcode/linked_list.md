@@ -148,6 +148,11 @@ func deepCopy(node *Node) *Node {
 
 ### 两个链表相交
 这道题目其实很巧妙，<https://leetcode.cn/problems/intersection-of-two-linked-lists-lcci/solutions/>
+其实一般就分为2种情况
+1. 不相交
+A、B互换之后，大家的遍历都是 len(A) + len(B) == len(B) + len(A)，最终遍历完一遍之后也会终止
+2. 相交
+那大家就会在第二次遍历的时候相遇
 ``` go
 func getIntersectionNode(headA, headB *ListNode) *ListNode {
 

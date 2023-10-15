@@ -29,6 +29,15 @@ ES是当今最为流行的开源搜索解决方案，对于大部分通用的场
 第三点这个代价其实我们一直容易忽略的
 
 
+## 关于ES的高可用
+大型工业项目不可避免的高可用问题。
+
+
+## 数据一致性的问题
+单机房不同实例的数据一致性的问题解决
+多机房的数据一致性问题解决
+
+
 ## ES对sql的支持
 在官方的最新文档中，[sql-getting-started](https://www.elastic.co/guide/en/elasticsearch/reference/current/sql-getting-started.html),发现已经支持sql了
 

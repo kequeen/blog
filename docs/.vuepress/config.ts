@@ -1,23 +1,13 @@
 import { defaultTheme } from 'vuepress'
 module.exports = {
-  plugins: [
-    [
-      '@vuepress/google-analytics',
-      {
-        'ga': 'G-WRXCG8WJ9G' // UA-00000000-0
-      }
-    ]
-  ],
   port : 80,
-  theme: defaultTheme({
+  themeConfig : {
     navbar : [
       {
         text : '关于我',
         link : '/nav/about_me.md'
       },
     ],
-
-
     // 你也可以直接将它设置为一个 URL
     repo: 'https://github.com/kequeen/blog',
     docsBranch: 'master',
@@ -257,5 +247,5 @@ module.exports = {
         ],
       },
     ],
-  }),
+  }
 }
