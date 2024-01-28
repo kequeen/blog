@@ -1,5 +1,6 @@
 import { defaultTheme } from 'vuepress'
 export default {
+  base: '/thinking/',
   theme : defaultTheme({
      navbar : [
       {
